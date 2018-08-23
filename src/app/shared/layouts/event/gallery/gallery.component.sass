@@ -1,0 +1,94 @@
+@import '~src/app/toolkit/shared-styles/defultat-for-components'
+
+.event-gallery
+  width: 100%
+  margin-bottom: 250px
+
+img
+  width: 100%
+  height: 100%
+  -o-object-fit: cover
+  object-fit: cover
+
+::ng-deep .ui-widget-content
+  border: 0px
+
+::ng-deep .my-carousel
+  padding: 0px
+  .ui-carousel-next-button, .ui-carousel-prev-button
+    display: flex
+    align-items: center
+    padding: 15px
+    width: auto
+    text-align: center
+    justify-content: center
+    @include transition(0.25s)
+    color: #b4b4b4
+    outline: 1px solid #b4b4b4
+    &:hover
+      outline: 1px solid #fff
+      background-color: #fff
+    &:hover:after, &:hover:before
+      color: #333
+
+  .ui-carousel-page-links
+    display: none
+
+  .ui-carousel-page-link
+    display: none
+  
+  .ui-carousel-dropdown
+    display: none
+
+  .ui-carousel-next-button
+    margin-right: 20px
+    order: 2
+    &:before
+      display: none
+    &:after
+      content: "\e932"
+      font-size: 55px
+      color: #fff
+  .ui-carousel-prev-button
+    order: 1
+    margin-left: 20px
+    &:before
+      content: "\e931"
+      font-size: 55px
+      color: #fff
+  .ui-carousel-header
+    background-color: transparent
+    background-image: none
+    border: 0px
+    position: absolute
+    z-index: 6
+    top: 50%
+    -webkit-transform: translate(0,-50%)
+    -moz-transform: translate(0,-50%)
+    -ms-transform: translate(0,-50%)
+    -o-transform: translate(0,-50%)
+    transform: translate(0,-50%)
+    width: 100%
+    display: flex
+    justify-content: space-between
+    align-items: center
+    padding: 3px 0px
+    
+    .ui-carousel-header-title
+      display: none
+
+  .ui-carousel-viewport
+    .ui-carousel-items
+      .ui-carousel-item
+        position: relative
+        border: 0px
+        height: 400px
+        width: 25vw !important
+        margin: 0px
+        a
+          width: 100%
+          height: 100%
+          display: block
+
+
+

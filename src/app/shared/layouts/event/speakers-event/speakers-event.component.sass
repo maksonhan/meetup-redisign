@@ -1,0 +1,91 @@
+@import '~src/app/toolkit/shared-styles/defultat-for-components'
+
+.event-speakers
+  width: 100%
+  padding-top: 100px
+  padding-bottom: 100px
+  background-color: #f3f3f3
+  h2
+    font-weight: 300
+    font-size: 25px
+    text-align: center
+
+.speakers-wrapper
+  margin-top: 100px
+  width: 100%
+  display: flex
+  flex-wrap: wrap
+  justify-content: space-around
+  .speaker-item
+    width: 25%
+    margin: 0px 15px 55px
+    height: 420px
+    background-color: #fff
+    position: relative
+    overflow: hidden
+    cursor: pointer
+    .speaker-photo
+      height: 65%
+      width: 100%
+      img
+        width: 100%
+        height: 100%
+        object-fit: cover
+        object-position: center 20%
+    .speaker-dossier
+      padding: 15px 0px
+      position: absolute
+      height: 100%
+      width: 100%
+      background-color: #fff
+      top: 67%
+      @include transition(.5s)
+      &:hover
+        top: 0px
+      &:hover > .fa-sort-up
+        -webkit-transform: rotate(180deg)
+        -moz-transform: rotate(180deg)
+        -ms-transform: rotate(180deg)
+        -o-transform: rotate(180deg)
+        transform: rotate(180deg)
+        color: $blue
+      .speaker-name
+        float: left
+        width: 45%
+        text-align: center
+      .speaker-company
+        float: right
+        width: 45%
+        text-align: center
+      .speaker-theme
+        text-align: center
+        margin-top: 40px
+        font-weight: 600
+        font-size: 22px
+      .fa-sort-up
+        width: 100%
+        margin-top: 20px
+        color: $orange
+        text-align: center
+        font-size: 25px
+        @include transition(.3s)
+
+      .detail-info
+        padding: 35px 25px
+        font-weight: 200
+        line-height: 1.3
+
+.be-speaker
+  margin: 70px auto 0px
+  text-align: center
+  h3
+    margin-bottom: 15px
+  p
+    margin-top: 5px
+    margin-bottom: 10px
+    font-size: 18px
+    font-weight: 300
+  a
+    font-weight: 500
+    color: $orange
+    font-size: 18px

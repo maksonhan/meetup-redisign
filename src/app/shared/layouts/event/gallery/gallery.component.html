@@ -1,3 +1,10 @@
-<p>
-  gallery works!
-</p>
+
+<section class="event-gallery">
+  <p-carousel styleClass="my-carousel" [value]="eventsPhoto" numVisible="4" circular="circular" breakpoint="413">
+    <ng-template let-photo pTemplate="item">
+      <a href="assets/img/events/{{photo.thumbnail}}.jpg" data-lightbox="meetup"><div class="shadow"></div>
+        <img src="assets/img/events/{{photo.thumbnail}}.jpg" alt="">
+      </a>
+    </ng-template>
+  </p-carousel>
+</section>

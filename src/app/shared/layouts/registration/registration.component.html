@@ -1,0 +1,27 @@
+<section class="registration">
+
+  <div class="container-short">
+    <h3>Запись на участие</h3>
+    <p>все поля обязательны к заполнению*</p>
+    <form action="">
+      <input type="text" name="name" placeholder="Ваше имя">
+      <input type="text" name="company" placeholder="Компания">
+      <input type="text" name="mail" placeholder="@mail adress">
+      <input type="text" name="phone" placeholder="Телефон">
+      <button type="submit">Отправить</button>
+
+      <div class="form-check">
+        <div class="check-block">
+          <input id="dispatch-check" class="dispatch-check" checked type="checkbox" formControlName="isDistribution">
+          <label for="dispatch-check">Хочу получать рассылку</label>
+        </div>
+        <div class="check-block">
+          <input id="agree-check" class="agree-check" checked type="checkbox" formControlName="isUserAgreement">
+          <label class="label-agree" for="agree-check">Подтверждаю согласие на Пользовательское соглашение</label>
+        </div>
+      </div>
+
+    </form>
+  </div>
+
+</section>
