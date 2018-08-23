@@ -111,10 +111,14 @@ header
   .top-line
     padding: 5px 0
     @extend %display-flex
-    justify-content: flex-end
-    //flex-wrap: wrap
-    height: 70px
+    height: 100px
     position: relative
+    .logo
+      @include flex(1, 0, auto)
+      img
+        width: 180px
+        height: 40px
+        cursor: pointer
 
     .nav-menu
       display: none

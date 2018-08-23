@@ -1,5 +1,8 @@
-import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
+
+import {AccordionModule} from 'primeng/accordion';
+import {LightboxModule} from 'primeng/lightbox';
 
 import { AppComponent } from './app.component';
 import { MainComponent } from './main/main.component';
@@ -7,6 +10,10 @@ import { AppRoutingModule } from './/app-routing.module';
 import { HeaderComponent } from './shared/layouts/header/header.component';
 import { FooterComponent } from './shared/layouts/footer/footer.component';
 import { EventsComponent } from './events/events.component';
+import { EventComponent } from './shared/layouts/event/event.component';
+import { VideoComponent } from './shared/layouts/event/video/video.component';
+import { GalleryComponent } from './shared/layouts/event/gallery/gallery.component';
+
 
 @NgModule({
   declarations: [
@@ -14,11 +21,16 @@ import { EventsComponent } from './events/events.component';
     MainComponent,
     HeaderComponent,
     FooterComponent,
-    EventsComponent
+    EventsComponent,
+    EventComponent,
+    VideoComponent,
+    GalleryComponent
   ],
   imports: [
-    BrowserModule,
-    AppRoutingModule
+    BrowserAnimationsModule,
+    AccordionModule,
+    AppRoutingModule,
+    LightboxModule
   ],
   providers: [],
   bootstrap: [AppComponent]
