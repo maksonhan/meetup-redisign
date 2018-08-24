@@ -99,10 +99,12 @@ html,body
   width: 65vw
   margin: 0 auto
   position: relative
+  background-color: rgba(255,255,255, 0.7)
 
 .subscribe-section
+  background-color: rgba(255,255,255, 0.5)
   width: 100%
-  min-height: 450px
+  height: 450px
   .subscribe-view
     display: flex
     justify-content: space-between
@@ -159,10 +161,19 @@ html,body
   display: flex
   min-height: 100px
   .logo
-    @include flex(5,0,auto)
+    @include flex(2,0,auto)
     img
       width:  180px
       height: 40px
+
+.footer-help
+  @include flex(3,0,50px)
+  p
+    line-height: 1.5
+    font-weight: 500
+    a
+      color: $blue
+      border-bottom: 1px solid $blue
 
 .footer-nav
   @include flex(2,0,auto)

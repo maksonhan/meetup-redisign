@@ -1,1 +1,110 @@
 @import '~src/app/toolkit/shared-styles/defultat-for-components'
+
+
+::ng-deep header .top-line
+  .logo
+    visibility: visible !important
+  nav ul li a
+    color: #333 !important
+  &:hover
+    color: $orange !important
+
+.container-short
+  background-color: rgba(255,255,255, 0.5)
+
+.all-speakers
+  margin-top: 150px
+
+
+.speaker-intro
+  width: 800px
+  margin: 50px auto 0px
+  text-align: center
+  padding: 15px
+  h1
+    position: relative
+    font-weight: 500
+    font-size: 30px
+    text-transform: uppercase
+    text-align: center
+    margin-bottom: 40px
+    &:after
+      content: ''
+      position: absolute
+      bottom: -15px
+      left: 50%
+      margin-left: -25px
+      width: 50px
+      height: 1px
+      background-color: #333
+  p
+    font-size: 20px
+    line-height: 1.5
+    font-weight: 200
+  a
+    font-weight: 500
+    color: $orange
+    font-size: 18px
+
+
+.speakers-wrapper
+  width: 100%
+  margin-top: 100px
+  display: flex
+  flex-wrap: wrap
+  justify-content: space-around
+  .speaker-item
+    width: 20%
+    margin: 0px 15px 55px
+    height: 300px
+    background-color: #fff
+    position: relative
+    overflow: hidden
+    cursor: pointer
+    .speaker-photo
+      height: 100%
+      width: 100%
+      img
+        width: 100%
+        height: 100%
+        object-fit: cover
+        object-position: center
+    .speaker-dossier
+      position: absolute
+      height: auto
+      width: 100%
+      bottom: 0px
+      padding: 5px 10px
+      background-color: rgba(0,0,0,0.5)
+      @include transition(.5s)
+      p
+        color: #fff
+        margin-bottom: 5px
+      .speaker-name
+        font-family: 'Lobster', cursive
+        font-weight: 300
+        font-size: 30px
+        text-align: center
+      .speaker-company
+        text-align: center
+        color: $orange
+
+.be-speaker
+  margin: 100px auto 80px
+  text-align: center
+  width: 300px
+  position: relative
+  border-top: 1px solid #b4b4b4
+  border-bottom: 1px solid #b4b4b4
+  padding: 50px 0px
+  h3
+    margin-bottom: 15px
+  p
+    margin-top: 5px
+    margin-bottom: 10px
+    font-size: 18px
+    font-weight: 300
+  a
+    font-weight: 500
+    color: $orange
+    font-size: 18px

@@ -21,7 +21,7 @@
     transform: translate3d(-50%, -50%, 0)
     z-index: 99
     text-align: center
-    font-weight: 900
+    font-weight: 500
     font-size: 110px
     text-transform: uppercase
     color: #fff
@@ -30,11 +30,12 @@
       display: block
       margin: 50px auto
       border: 2px solid $orange
+      text-transform: uppercase
       box-shadow: 0 1em 2em -1em rgba(0,0,0,1)
       font-size: 19px
       background-color: rgba(0,0,0,0.1)
       color: #fff
-      width: 400px
+      width: 450px
       @include transition(0.5s)
       &:hover
         background-color: $orange
@@ -137,8 +138,8 @@ $scale-base-1: (1 + $scale / 100%)
   width: 100%
 
 .main-meetup
-  width: 100%
-  min-height: 700px
+  width: 100vw
+  height: 100vh
   display: flex
   align-items: stretch
 
@@ -175,16 +176,16 @@ $scale-base-1: (1 + $scale / 100%)
       font-weight: 500
       margin-top: 100px
       background-color: $orange
-      width: 200px
+      width: 250px
       font-size: 17px
       padding: 16px 25px
-      text-align: center
       -webkit-border-radius: 5px
       -moz-border-radius: 5px
       border-radius: 5px
       color: #fff
       display: flex
       align-items: center
+      justify-content: center
       &:hover
         box-shadow: 0 1em 2em -1em rgba(0,0,0,1)
       .fa-sort-down

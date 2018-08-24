@@ -17,6 +17,7 @@ import { GalleryComponent } from './shared/layouts/event/gallery/gallery.compone
 import { SpeakersEventComponent } from './shared/layouts/event/speakers-event/speakers-event.component';
 import { RegistrationComponent } from './shared/layouts/registration/registration.component';
 import { SpeakersComponent } from './speakers/speakers.component';
+import { ParticlesModule } from 'angular-particle';
 
 
 @NgModule({
@@ -38,7 +39,8 @@ import { SpeakersComponent } from './speakers/speakers.component';
     AccordionModule,
     AppRoutingModule,
     LightboxModule,
-    CarouselModule
+    CarouselModule,
+    ParticlesModule
   ],
   providers: [],
   bootstrap: [AppComponent]

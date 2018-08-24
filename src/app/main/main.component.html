@@ -8,8 +8,8 @@
   <div class="slideshow-image" style="background-image: url('../../assets/img/header-ken-burn/3.jpg')"></div>
   <div class="slideshow-image" style="background-image: url('../../assets/img/header-ken-burn/4.jpg')"></div>
   <h1>
-    <span>Cinimex</span> Meetup
-    <a href="">Запись на текущее мероприятие</a>
+    Cinimex Meetup
+    <a routerLink="events/12">Запись на текущее мероприятие</a>
   </h1>
   <div class="shadow"></div>
 </div>
@@ -25,7 +25,7 @@
         <p class="date-meetup">18 октября 2018</p>
         <p class="theme-meetup">SCALA RUSSIAN MEETUP</p>
         <p class="base-info">Y-3’s new capsule collection finds inspiration in basketball player James Harden and features the highly-anticipated first non-high top Adidas Boost You Wear sneaker. As longtime Y-3 collaborators, Standard Black drew on its extensive experience in the realms of fashion and athletic creative direction to craft a unique identity for the project.</p>
-        <a href="" class="button_common">Подробности и Запись <i class="fas fa-sort-down fa-rotate-270"></i></a>
+        <a routerLink="events/12" class="button_common">Регистрация <i class="fas fa-sort-down fa-rotate-270"></i></a>
       </div>
     </div>
 </section>
@@ -100,10 +100,12 @@
       </div>
 
     </div>
-    <a href="" class="button-all-speakers">все спикеры <i class="fas fa-sort-down fa-rotate-270"></i></a>
+    <a routerLink="speakers" class="button-all-speakers">все спикеры <i class="fas fa-sort-down fa-rotate-270"></i></a>
   </div>
 </section>
 
 
 
 <app-footer></app-footer>
+
+<router-outlet></router-outlet>
