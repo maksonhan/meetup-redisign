@@ -7,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class GalleryComponent implements OnInit {
   public eventsPhoto: any;
+  public middleChild: any;
   constructor() {
     this.eventsPhoto = [
       {thumbnail: '0', big: '1'},
@@ -34,7 +35,8 @@ export class GalleryComponent implements OnInit {
       {thumbnail: '0', big: '1'},
       {thumbnail: '1', big: '1'},
     ];
-    console.log(this.eventsPhoto[1].thumbnail);
+    console.log(this.eventsPhoto.length / 2 - 1);
+    this.middleChild = `param:nth-child(${this.eventsPhoto.length / 2 - 1})`;
   }
 
   ngOnInit() {
