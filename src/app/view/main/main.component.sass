@@ -230,7 +230,7 @@ $scale-base-1: (1 + $scale / 100%)
       display: flex
       justify-content: space-between
       width: 100%
-      font-weight: 600
+      font-weight: 500
       p
         background-color: rgba(18,54,114,0.3)
         color: #fff
@@ -240,3 +240,40 @@ $scale-base-1: (1 + $scale / 100%)
           float: right
 
 
+@media screen and (max-width: 1550px)
+  .head
+    h1
+      font-size: 80px
+      a
+        padding: 20px
+        font-size: 16px
+        width: 360px
+  .main-meetup
+    .view-meetup
+      width: 50%
+    .descr-meetup
+      .base-info
+        font-size: 18px
+      .date-meetup
+        font-size: 20px
+      a
+        font-size: 16px
+        width: 230px
+
+  .main-speakers
+    h2
+      font-weight: 300
+      font-size: 21px
+      padding: 60px 0px 60px 0px
+    .speakers-view
+      justify-content: center
+    .speaker-item
+      width: 20%
+      .speaker-photo
+        height: 270px
+      .speaker-descr
+        p
+          font-size: 16px
+          width: 50%
+          padding: 10px 0px
+          text-align: center

@@ -1,117 +1,4 @@
-body
-  min-width: 320px
-
-*
-  margin: 0
-a
-  color: #333
-  outline: none
-  text-decoration: none
-  cursor: pointer
-
-a:hover
-  text-decoration: none
-  color: #333
-
-input
-  border: none
-  outline: none
-
-input::-webkit-input-placeholder  /* WebKit browsers */
-  color: #c0c0c0
-
-input:-moz-placeholder  /* Mozilla Firefox 4 to 18 */
-  color: #c0c0c0
-
-input::-moz-placeholder  /* Mozilla Firefox 19+ */
-  color: #c0c0c0
-
-input:-ms-input-placeholder  /* Internet Explorer 10+ */
-  color: #c0c0c0
-
-
-.clear
-  clear: both
-
-@mixin transition($time)
-  -webkit-transition: all $time ease
-  -moz-transition:    all $time ease
-  -o-transition:      all $time ease
-  transition:         all $time ease
-
-@mixin transform-translate($x,$y)
-  -webkit-transform: translate($x,$y)
-  -moz-transform: translate($x,$y)
-  -ms-transform: translate($x,$y)
-  -o-transform: translate($x,$y)
-  transform: translate($x,$y)
-
-@mixin filter-grayscale($percent)
-  -webkit-filter: grayscale($percent)
-  -moz-filter: grayscale($percent)
-  -o-filter: grayscale($percent)
-  filter: grayscale($percent)
-
-a, input[type="submit"]
-  @include transition(.25s)
-
-$blue: #123672
-$orange: #f68b1f
-$shadowtxt: 1px 1px 1px #000
-
-%display-flex
-  display: flex
-  align-items: center
-
-@mixin flex($grow, $shrink, $width)
-  -webkit-flex: $grow $shrink $width
-  -ms-flex: $grow $shrink $width
-  flex: $grow $shrink $width
-
-%classic-bgc
-  background-position: center 15%
-  background-repeat: no-repeat
-  background-size: cover
-
-%main-font
-  font-family: "Exo 2", sans-serif
-  font-size: 16px
-
-%h-font
-  font-family: "bebas_neuebold", sans-serif
-  font-size: 16px
-
-%beatuful-font
-  font-family: 'Lobster', cursive
-  font-size: 18px
-
-h1, h2, h3
-  color: #333
-  font-family: "Exo 2", sans-serif
-
-a, p, label, input
-  font-family: "Exo 2", sans-serif
-  font-size: 16px
-  color: #333
-
-html,body
-  height: 100%
-  overflow-x: hidden
-  color: #333
-  background-color: #fff
-  position: relative
-.container
-  width: 90vw
-  height: 100%
-  margin: 0 auto
-  position: relative
-
-.container-short
-  height: 100%
-  width: 65vw
-  margin: 0 auto
-  position: relative
-
+@import '~src/app/toolkit/shared-styles/defultat-for-components'
 
 
 .registration
@@ -121,12 +8,13 @@ html,body
     font-size: 30px
     font-weight: 500
     text-align: center
-    text-decoration: uppercase
+    text-transform: uppercase
   p
-    margin-top: 25px
+    margin-top: 15px
     color: #b4b4b4
     font-size: 18px
     text-align: center
+    font-weight: 200
   form
     margin-top: 65px
     display: flex
@@ -171,3 +59,24 @@ html,body
         margin-right: 8px
       .label-agree
         font-size: 14px
+
+
+
+@media screen and (max-width: 1550px)
+
+  .registration
+    h3
+      font-size: 25px
+    p
+      font-size: 16px
+    form
+      input[type="text"]
+        font-size: 16px
+        padding: 15px 0px
+      button
+        font-size: 16px
+        padding: 18px 0px
+
+      .form-check
+        .label-agree
+          font-size: 11px

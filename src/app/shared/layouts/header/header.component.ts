@@ -37,10 +37,6 @@ export class HeaderComponent implements OnInit {
   public openPage(link: string) {
     this.router.navigate([link], { relativeTo: this.route });
   }
-
-  public scrollToSubscribe() {
-    window.scrollTo(0, 3300);
-  }
   changeHeaderStyle() {
     const url = this.router.url;
     if (url === '/events' || url === '/speakers') {

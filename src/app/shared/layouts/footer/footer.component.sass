@@ -1,10 +1,6 @@
 @import '~src/app/toolkit/shared-styles/defultat-for-components'
 
 .container-short
-  height: 100%
-  width: 65vw
-  margin: 0 auto
-  position: relative
   background-color: rgba(255,255,255, 0.7)
 
 .subscribe-section
@@ -106,3 +102,33 @@
     img
       width: 30px
       height: 30px
+
+
+@media screen and (max-width: 1550px)
+
+  .subscribe-section
+    .subscribe-offer
+      width: 45%
+      h3
+        font-size: 24px
+      p
+        font-size: 15px
+        margin-top: 20px
+    .subscribe-form
+      button
+        font-size: 22px
+
+  .footer-wrap
+    .logo
+      img
+        width: 160px
+        height: 35px
+  .social
+    @include flex(0,0,140px)
+    h3
+      font-weight: 300
+      font-size: 20px
+    .social-icons
+      img
+        width: 25px
+        height: 25px
