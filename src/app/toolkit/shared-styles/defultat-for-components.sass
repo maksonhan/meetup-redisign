@@ -53,6 +53,16 @@ input:-ms-input-placeholder  /* Internet Explorer 10+ */
   -o-filter: grayscale($percent)
   filter: grayscale($percent)
 
+@mixin box-shadow($x,$y,$blur,$spread,$color)
+  -webkit-box-shadow: $x $y $blur $spread $color
+  -moz-box-shadow: $x $y $blur $spread $color
+  box-shadow: $x $y $blur $spread $color
+
+@mixin box-shadow-inset($x,$y,$blur,$spread,$color)
+  -webkit-box-shadow: inset $x $y $blur $spread $color
+  -moz-box-shadow: inset $x $y $blur $spread $color
+  box-shadow: inset $x $y $blur $spread $color
+
 a, input[type="submit"]
   @include transition(.25s)
 
@@ -103,10 +113,13 @@ html,body
   position: relative
 
 .container
+  @include transition(0.5s)
   width: 90vw
   height: 100%
   margin: 0 auto
   position: relative
+  padding-left: 0
+  padding-right: 0
 
 .container-short
   height: 100%
@@ -120,3 +133,5 @@ html,body
   height: 100%
   position: absolute
   z-index: 5
+  left: 0px
+  top: 0px

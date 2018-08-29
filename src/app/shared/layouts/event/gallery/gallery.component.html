@@ -1,10 +1,15 @@
 
 <section class="event-gallery">
-  <p-carousel styleClass="my-carousel" [value]="eventsPhoto" numVisible="4" circular="circular" breakpoint="413">
-    <ng-template let-photo pTemplate="item">
-      <a href="assets/img/events/{{photo.thumbnail}}.jpg" data-lightbox="meetup"><div class="shadow"></div>
-        <img src="assets/img/events/{{photo.thumbnail}}.jpg" alt="">
+  <div class="photos-block">
+    <div *ngFor="let img of eventsPhotos" class="img-item">
+      <a href="assets/img/events/{{img.thumbnail}}.jpg" data-lightbox="event">
+        <img src="assets/img/events/{{img.thumbnail}}.jpg" alt="">
+        <div class="shadow"></div>
       </a>
-    </ng-template>
-  </p-carousel>
+    </div>
+
+    <a class="expand-gallery" (click)="expandGallery()" >загрузить еще фото</a>
+
+  </div>
+
 </section>

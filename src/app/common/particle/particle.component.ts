@@ -1,11 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-speakers',
-  templateUrl: './speakers.component.html',
-  styleUrls: ['./speakers.component.sass']
+  selector: 'app-particle',
+  templateUrl: './particle.component.html',
+  styleUrls: ['./particle.component.sass']
 })
-export class SpeakersComponent implements OnInit {
+export class ParticleComponent implements OnInit {
 
   myStyle: object = {};
   myParams: object = {};
@@ -20,7 +20,7 @@ export class SpeakersComponent implements OnInit {
       'position': 'fixed',
       'width': '100%',
       'height': '100%',
-      'z-index': 0,
+      'z-index': -1,
       'top': 0,
       'left': 0,
       'right': 0,
@@ -30,14 +30,14 @@ export class SpeakersComponent implements OnInit {
     this.myParams = {
       particles: {
         number: {
-          value: 100,
+          value: 120,
           density: {
             enable: true,
-            value_area: 800
+            value_area: 1000
           }
         },
         color: {
-          value: '#ff0000'
+          value: '#f68b1f'
         },
         shape: {
           type: 'triangle',
@@ -45,8 +45,8 @@ export class SpeakersComponent implements OnInit {
         line_linked: {
           enable: true,
           distance: 150,
-          color: '#000000',
-          opacity: 0.3,
+          color: '#123672',
+          opacity: 0.2,
           width: 1
         },
         move: {
@@ -58,12 +58,12 @@ export class SpeakersComponent implements OnInit {
         events: {
           onhover: {
             enable: true,
-            mode: 'repulse',
+            mode: 'none',
             duration: 0.5
           },
           onclick: {
             enable: true,
-            'mode': 'push'
+            mode: 'grab'
           }
         }
       },

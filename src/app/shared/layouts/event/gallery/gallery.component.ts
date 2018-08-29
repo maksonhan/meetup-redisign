@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { globalstore } from 'src/app/common/constants/gallery';
 
 @Component({
   selector: 'app-gallery',
@@ -6,40 +7,18 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./gallery.component.sass']
 })
 export class GalleryComponent implements OnInit {
-  public eventsPhoto: any;
-  public middleChild: any;
+  public eventsPhotos: any;
+  private gallerycounter = 8;
   constructor() {
-    this.eventsPhoto = [
-      {thumbnail: '0', big: '1'},
-      {thumbnail: '1', big: '1'},
-      {thumbnail: '2', big: '1'},
-      {thumbnail: '3', big: '1'},
-
-      {thumbnail: '4', big: '1'},
-      {thumbnail: '5', big: '1'},
-      {thumbnail: '0', big: '1'},
-      {thumbnail: '1', big: '1'},
-
-      {thumbnail: '2', big: '1'},
-      {thumbnail: '3', big: '1'},
-      {thumbnail: '4', big: '1'},
-      {thumbnail: '5', big: '1'},
-
-      {thumbnail: '0', big: '1'},
-      {thumbnail: '1', big: '1'},
-      {thumbnail: '2', big: '1'},
-      {thumbnail: '3', big: '1'},
-
-      {thumbnail: '4', big: '1'},
-      {thumbnail: '5', big: '1'},
-      {thumbnail: '0', big: '1'},
-      {thumbnail: '1', big: '1'},
-    ];
-    console.log(this.eventsPhoto.length / 2 - 1);
-    this.middleChild = `param:nth-child(${this.eventsPhoto.length / 2 - 1})`;
+  this.eventsPhotos = globalstore.gallery.slice(0, this.gallerycounter);
+  console.log(this.eventsPhotos);
   }
 
   ngOnInit() {
+  }
+  expandGallery() {
+    this.gallerycounter += 4;
+    this.eventsPhotos = globalstore.gallery.slice(0, this.gallerycounter);
   }
 
 }

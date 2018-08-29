@@ -3,7 +3,7 @@
   <div class="container">
     <section class="top-line">
       <div class="logo">
-        <a (click)="openPage('/')"><img src="assets/img/LogoDark.png"></a>
+        <a (click)="openPage('/')"><img src="assets/img/{{logo}}"></a>
       </div>
 
       <a class="nav-menu" (click)="appearNav()"><i class="fas fa-bars"></i></a>
@@ -16,9 +16,9 @@
             <!--<li *ngFor="let item of arr">-->
             <!--<a href="#">{{item}}</a>-->
             <!--</li>-->
-            <li><a (click)="openPage('/events')">Мероприятия</a></li>
-            <li><a (click)="openPage('/speakers')">Спикеры</a></li>
-            <li><a href="https://welcome.cinimex.ru/" target="_blank">Карьера</a></li>
+            <li><a [ngClass]="headerListChange" (click)="openPage('/events')">Мероприятия</a></li>
+            <li><a [ngClass]="headerListChange" (click)="openPage('/speakers')">Спикеры</a></li>
+            <li><a [ngClass]="headerListChange" href="https://welcome.cinimex.ru/" target="_blank">Карьера</a></li>
           </ul>
         </nav>
       </div>
