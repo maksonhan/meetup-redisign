@@ -96,7 +96,7 @@ $shadowtxt: 1px 1px 1px #000
   font-family: 'Lobster', cursive
   font-size: 18px
 
-h1, h2, h3, h4, h5
+h1, h2, h3, h4, h5, h6
   color: #333
   font-family: "Exo 2", sans-serif
 
@@ -127,6 +127,14 @@ html,body
   margin: 0 auto
   position: relative
 
+.body-shadow
+  background-color: #111
+  opacity: 0
+  height: 100%
+  width: 100%
+  position: fixed
+  z-index: -1
+
 .shadow
   background-color: rgba(0,0,0,0.4)
   width: 100%
@@ -144,3 +152,9 @@ html,body
 
   .container-short
     width: 75vw
+
+
+@media screen and (max-width: 1200px)
+
+  .container-short
+    width: 85vw

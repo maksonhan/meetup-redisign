@@ -8,7 +8,7 @@
 
       <a class="nav-menu" (click)="appearNav()"><i class="fas fa-bars"></i></a>
 
-      <div class="resp-nav-wrapper" [style.left.px]="left">
+      <div class="resp-nav-wrapper" [style.right.px]="right">
         <h6>Меню</h6>
         <i class="fas fa-times exit-nav" (click)="exitNav()"></i>
         <nav>
@@ -21,11 +21,18 @@
             <li><a [ngClass]="headerListChange" href="https://welcome.cinimex.ru/" target="_blank">Карьера</a></li>
           </ul>
         </nav>
+        <a class="subscribe-nav">подписаться</a>
       </div>
 
 
       <div class="btnSub">
         <a class="subscribe"><i class="far fa-check-square"></i>Подписаться</a>
+      </div>
+
+      <div class="burger-menu"  (click)="burgerNavigation()">
+        <span [ngClass]="burgerSwitch" class="burger-line"></span>
+        <span [ngClass]="burgerSwitch" class="burger-line"></span>
+        <span [ngClass]="burgerSwitch" class="burger-line"></span>
       </div>
     </section>
   </div>

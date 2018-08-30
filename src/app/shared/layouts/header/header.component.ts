@@ -10,10 +10,11 @@ import { ActivatedRoute, RouterModule, Router } from '@angular/router';
 export class HeaderComponent implements OnInit {
   public logo: string;
   public headerListChange: string;
+  public burgerSwitch: string;
   public arr = ['Мероприятия', 'Спикеры', 'Карьера'];
-  public left: number = -460;
-  public bodyShadowIndex: number = -1;
-  public bodyShadowOpacity: number = 0;
+  public right = -420;
+  public bodyShadowIndex = -1;
+  public bodyShadowOpacity = 0;
 
   constructor(private router: Router, private route: ActivatedRoute) {
     this.changeHeaderStyle();
@@ -23,28 +24,34 @@ export class HeaderComponent implements OnInit {
   }
 
   public appearNav() {
-    this.left = 0;
+    this.right = 0;
     this.bodyShadowIndex = 50;
     this.bodyShadowOpacity = 0.8;
+    this.burgerSwitch = 'hover_burger-line';
   }
 
   public exitNav() {
-    this.left = -460;
+    this.right = -420;
     this.bodyShadowIndex = -1;
     this.bodyShadowOpacity = 0;
+    this.burgerSwitch = 'null';
   }
 
   public openPage(link: string) {
     this.router.navigate([link], { relativeTo: this.route });
   }
-  changeHeaderStyle() {
+
+  public changeHeaderStyle() {
     const url = this.router.url;
     if (url === '/events' || url === '/speakers') {
       this.logo = 'LogoDark.png';
       this.headerListChange = 'black-style';
-    } else  {
+    } else {
       this.logo = 'LogoLight.png';
       this.headerListChange = 'white-style';
     }
+  }
+  public burgerNavigation() {
+    return this.right !== 0 ? this.appearNav() : this.exitNav();
   }
 }

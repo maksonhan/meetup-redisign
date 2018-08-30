@@ -4,13 +4,12 @@
 
 
 .head
-
   h1
     position: absolute
     top: 50%
     left: 50%
     transform: translate3d(-50%, -50%, 0)
-    z-index: 99
+    z-index: 6
     text-align: center
     font-weight: 500
     font-size: 110px
@@ -127,6 +126,7 @@ $scale-base-1: (1 + $scale / 100%)
 
 .main-preview
   width: 100%
+  position: relative
 
 .main-meetup
   width: 100vw
@@ -135,7 +135,7 @@ $scale-base-1: (1 + $scale / 100%)
   align-items: stretch
 
   .view-meetup
-    width: 55%
+    width: 45%
     overflow: hidden
     img
       display: block
@@ -151,7 +151,7 @@ $scale-base-1: (1 + $scale / 100%)
   .descr-meetup
     align-self: center
     width: 45%
-    padding: 80px
+    padding: 80px 110px
     p
       margin: 25px 0px 0px 0px
     .date-meetup
@@ -277,3 +277,45 @@ $scale-base-1: (1 + $scale / 100%)
           width: 50%
           padding: 10px 0px
           text-align: center
+    .button-all-speakers
+      width: 100px
+
+@media screen and (max-width: 1200px)
+
+  .head
+    h1
+      font-size: 60px
+      a
+        width: 300px
+        font-size: 14px
+  .main-meetup
+    .view-meetup
+      width: 40%
+      img
+        object-position: left
+    .descr-meetup
+      padding: 80px 0px 0px 80px
+      a
+        width: 180px
+        padding: 12px 20px
+        font-size: 14px
+      .date-meetup
+        font-size: 18px
+      .theme-meetup
+        font-size: 23px
+      .base-info
+        font-size: 16px
+
+  .main-speakers
+
+    h2
+      font-size: 19px
+      padding: 50px 0px
+
+    .speaker-item
+      width: 25%
+      .speaker-photo
+        height: 230px
+      .speaker-descr
+        p
+          font-size: 14px

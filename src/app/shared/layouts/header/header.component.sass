@@ -66,8 +66,13 @@ header
       .fa-check-square
         margin-right: 7px
 
-      cursor: pointer
 
+
+.burger-menu
+  display: none
+  
+.subscribe-nav
+  display: none
 
 @media screen and (max-width: 1550px)
   header
@@ -85,3 +90,92 @@ header
           height: 35px
       .subscribe
         font-size: 14px
+
+
+@media screen and (max-width: 1200px)
+  .container
+    position: static
+  .body-shadow
+    display: none
+
+  header
+    z-index: 99
+    .top-line
+      position: static
+      .resp-nav-wrapper
+        position: fixed
+        padding-right: 50px
+        @include transition(.5s)
+        right: -420px
+        top: 0px
+        width: 230px
+        height: 100vh
+        background-color: rgba(255,255,255, 0.9)
+        @include flex(0, 0, 330px)
+
+        h6
+          display: block
+          font-weight: 400
+          margin-top: 150px
+          text-align: right
+          font-size: 30px
+      nav
+        position: relative
+        margin-top: 50px
+        ul
+          display: flex
+          flex-direction: column
+          li
+            margin-top: 25px
+            margin-left: 0px
+            width: 100%
+            text-align: right
+            a
+              font-size: 20px
+              font-weight: 200
+            .white-style
+              color: #333
+
+
+      .btnSub
+        display: none
+
+  .subscribe-nav
+    color: #333
+    border: 1px solid $orange
+    padding: 10px 15px
+    margin-top: 55px
+    width: 130px
+    float: right
+    display: block
+    text-align: center
+    @include  transition(.4s)
+    &:hover
+      background-color: $orange
+      color: #fff
+
+
+  .burger-menu
+    cursor: pointer
+    @include flex(0,0, 50px)
+    display: flex
+    flex-direction: column
+    padding: 10px
+    z-index: 55
+    &:hover > .burger-line
+      -webkit-box-shadow: inset 0px 0px 50px $orange
+      -moz-box-shadow: inset 0px 0px 50px $orange
+      box-shadow: inset 0px 0px 50px $orange
+    .burger-line
+      width: 100%
+      height: 4px
+      background-color: #fff
+      @include transition(1s)
+      &:not(:last-child)
+        margin-bottom: 7px
+
+
+.hover_burger-line
+  -webkit-box-shadow: inset 0px 0px 50px $orange
+  -moz-box-shadow: inset 0px 0px 50px $orange
+  box-shadow: inset 0px 0px 50px $orange
