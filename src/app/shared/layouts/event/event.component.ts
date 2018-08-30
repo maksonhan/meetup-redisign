@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { ApiService } from 'src/app/core/utils/api/api.service';
 
 @Component({
   selector: 'app-event',
@@ -8,11 +9,14 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class EventComponent implements OnInit {
 
-  constructor(private route: ActivatedRoute) {
+  public photos: any;
+
+  constructor(private route: ActivatedRoute, private api: ApiService) {
 
   }
 
   ngOnInit() {
   }
+
 
 }
